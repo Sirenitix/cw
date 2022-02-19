@@ -1,0 +1,13 @@
+public class Maskify {
+    public static String maskify(String str) {
+        char[] ch = str.toCharArray();
+        String maskedString = "";
+        for(int i=0; i<ch.length; i++){
+          if(i < (ch.length - 4)){
+            maskedString += "#";
+          }else
+            maskedString += ch[i];
+        }
+      return maskedString;
+    }
+}
