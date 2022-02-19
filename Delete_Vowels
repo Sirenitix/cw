@@ -1,0 +1,27 @@
+public class Troll {
+  
+  public static Boolean Vowel_Or_Consonant(char y)
+    { 
+        if (   Character.toLowerCase(y) == 'a' 
+            || Character.toLowerCase(y) == 'e' 
+            || Character.toLowerCase(y) == 'i'
+            || Character.toLowerCase(y) == 'o'
+            || Character.toLowerCase(y) == 'u')
+           return true;
+        else
+            return false;
+            
+    }
+  
+    public static String disemvowel(String str) {
+     
+       char[] ch = str.toCharArray();
+       String withoutVowel= "";
+       for(int i = 0; i < ch.length; i++){
+             if(Vowel_Or_Consonant(ch[i]) != true){
+              withoutVowel += ch[i];
+             }
+       }
+      return withoutVowel;
+}
+}
